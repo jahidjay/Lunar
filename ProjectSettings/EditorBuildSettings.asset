@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/2D Platformer/Scenes/Main Menu.unity
+    guid: 48e08663f65319640ae59a81ac6a6294
+  - enabled: 0
+    path: Assets/2D Platformer/Scenes/Game L-1.unity
+    guid: d87f4203f2c419645ae9ea97bae08a47
+  - enabled: 0
+    path: Assets/2D Platformer/Scenes/Finish.unity
+    guid: f981d39570fa0014e9e70ca31f58d7a1
+  - enabled: 1
+    path: Assets/2D Platformer/Scenes/LunarNightLvel1/LunarMenu.unity
+    guid: 36a0a82aeedf8b34abfccae569a3da69
+  - enabled: 1
+    path: Assets/2D Platformer/Scenes/LunarNightLvel1/LunarGame L-1.unity
+    guid: ea32db1bfc1016045a24c3dd3359236d
+  - enabled: 1
+    path: Assets/2D Platformer/Scenes/LunarNightLvel1/LunarFinish.unity
+    guid: b1dcea6a66b2f82449ef21a7156880eb
+  m_configObjects: {}
