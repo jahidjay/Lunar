@@ -7,13 +7,14 @@ public class LunarHealthBar : MonoBehaviour
     [SerializeField] private LunarHealth playerHealth;
     [SerializeField] private Image totalhealthBar;
     [SerializeField] private Image currenthealthBar;
-
+    public float totalInitialHealth;
     private void Start()
     {
-        totalhealthBar.fillAmount = playerHealth.currentHealth / 30;
+        totalInitialHealth = playerHealth.currentHealth;
+        totalhealthBar.fillAmount = playerHealth.currentHealth / totalInitialHealth;
     }
     private void Update()
     {
-        currenthealthBar.fillAmount = playerHealth.currentHealth / 30;
+        currenthealthBar.fillAmount = playerHealth.currentHealth / totalInitialHealth;
     }
 }

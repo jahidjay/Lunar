@@ -33,8 +33,8 @@ public class LunarHealth : MonoBehaviour
     }
 
     private void Start()
-    {
-                components = GetComponents<Behaviour>();
+    {           
+                //components = GetComponents<Behaviour>();
     }
     public void TakeDamage(float _damage)
     {
@@ -77,10 +77,11 @@ public class LunarHealth : MonoBehaviour
             {
                 anim.SetTrigger("Death");
                 AudioManager.Instance.PlayAudio(deathSound, transform.position, 1);
-                GameStateManager.Instance.isWin = false;
-                foreach (Behaviour component in components)
-                    component.enabled = false;
-                Invoke("LoadEndingScene", 1f);
+                //GameStateManager.Instance.isWin = false;
+                //foreach (Behaviour component in components)
+                //    component.enabled = false;
+                Debug.Log("died");
+                //Invoke("LoadEndingScene", 1f);
                 return;
             }
             else if (gameObject.tag == "EnemyBoss")
@@ -94,6 +95,7 @@ public class LunarHealth : MonoBehaviour
             anim.SetTrigger("die");
             foreach (Behaviour component in components)
                 component.enabled = false;
+            Destroy(gameObject,.2f);
 
         }
     }
@@ -142,5 +144,15 @@ public class LunarHealth : MonoBehaviour
         //Activate all attached component classes
         foreach (Behaviour component in components)
             component.enabled = true;
+    }
+
+    public void FullHeal()
+    {
+         currentHealth = startingHealth;
+    }
+
+    public void RespownPlayer()
+    {
+        GetComponent<DeathManager>().RespawnAtCheckpoint();
     }
 }

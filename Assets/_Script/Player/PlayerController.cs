@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the player is near a ladder
-        Debug.Log(other.gameObject.layer);
+        //Debug.Log(other.gameObject.layer);
         if (other.gameObject.layer == wallLayer)
         {
             isTouchingWall = true;

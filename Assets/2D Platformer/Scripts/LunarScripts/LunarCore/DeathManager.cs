@@ -31,6 +31,10 @@ public class DeathManager : MonoBehaviour
     {
         // Move the player to the current respawn point
         transform.position = RespawnPoint.position;
+        Animator anim = gameObject.GetComponentInChildren<Animator>();
+        anim.Rebind();
+        anim.Update(0f);
+        GetComponent<LunarHealth>().FullHeal(); 
         Debug.Log("Respawning player at respawn point: " + RespawnPoint.position);
     }
 }

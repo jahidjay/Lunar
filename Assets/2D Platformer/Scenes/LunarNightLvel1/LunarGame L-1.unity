@@ -2877,6 +2877,7 @@ MonoBehaviour:
   playerHealth: {fileID: 557112026}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 717213942}
+  totalInitialHealth: 0
 --- !u!114 &211910802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4484,29 +4485,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 112242544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &303464510 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5441178664068477060, guid: c82cc0692504d854ab6537fba72eebcf, type: 3}
-  m_PrefabInstance: {fileID: 1693594017}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &303464511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7037980526477428472, guid: c82cc0692504d854ab6537fba72eebcf, type: 3}
   m_PrefabInstance: {fileID: 1693594017}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &303464515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303464510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a71b1a443fdd3c04e8097eab0d4e23d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RespawnPoint: {fileID: 303464511}
 --- !u!4 &312286711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 421776, guid: d39c86f458bba664e9ef86d745214f96, type: 3}
@@ -5867,6 +5850,7 @@ MonoBehaviour:
   playerHealth: {fileID: 1733681541}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 1741474501}
+  totalInitialHealth: 0
 --- !u!114 &380234253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6556,6 +6540,7 @@ GameObject:
   - component: {fileID: 420177929}
   - component: {fileID: 420177930}
   - component: {fileID: 420177936}
+  - component: {fileID: 420177940}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -6855,6 +6840,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &420177940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420177903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71b1a443fdd3c04e8097eab0d4e23d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RespawnPoint: {fileID: 0}
 --- !u!1 &420341746
 GameObject:
   m_ObjectHideFlags: 0
@@ -15475,6 +15473,7 @@ MonoBehaviour:
   playerHealth: {fileID: 2080427132}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 1751251900}
+  totalInitialHealth: 0
 --- !u!114 &666611238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16181,6 +16180,7 @@ MonoBehaviour:
   playerHealth: {fileID: 885394783}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 1885134267}
+  totalInitialHealth: 0
 --- !u!114 &739087850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17694,6 +17694,7 @@ MonoBehaviour:
   playerHealth: {fileID: 1466328526}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 1545425484}
+  totalInitialHealth: 0
 --- !u!114 &857624333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24608,6 +24609,7 @@ MonoBehaviour:
   playerHealth: {fileID: 1419471561}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 157209267}
+  totalInitialHealth: 0
 --- !u!114 &1279345985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26347,6 +26349,7 @@ MonoBehaviour:
   playerHealth: {fileID: 1508765224}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 327766079}
+  totalInitialHealth: 0
 --- !u!1 &1419471559
 GameObject:
   m_ObjectHideFlags: 0
@@ -26937,7 +26940,6 @@ GameObject:
   - component: {fileID: 1447929161}
   - component: {fileID: 1447929162}
   - component: {fileID: 1447929163}
-  - component: {fileID: 1447929164}
   m_Layer: 0
   m_Name: Deathzone
   m_TagString: Spike
@@ -27013,19 +27015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f5373f57e88d84a9325bb1a6cb5aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1447929164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447929160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a71b1a443fdd3c04e8097eab0d4e23d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RespawnPoint: {fileID: 303464511}
 --- !u!1 &1464649386
 GameObject:
   m_ObjectHideFlags: 0
@@ -28216,6 +28205,7 @@ MonoBehaviour:
   playerHealth: {fileID: 536106200}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 1367225378}
+  totalInitialHealth: 0
 --- !u!114 &1528519509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30132,7 +30122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1679371954}
   - component: {fileID: 1679371955}
-  - component: {fileID: 1679371956}
   m_Layer: 3
   m_Name: Collider (1)
   m_TagString: Ground
@@ -30185,7 +30174,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.10464144, y: -0.032653928}
@@ -30201,18 +30190,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.99, y: 0.78}
   m_EdgeRadius: 0
---- !u!114 &1679371956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679371953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69f5373f57e88d84a9325bb1a6cb5aba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1680036798
 GameObject:
   m_ObjectHideFlags: 0
@@ -30546,10 +30523,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5441178664068477060, guid: c82cc0692504d854ab6537fba72eebcf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 303464515}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c82cc0692504d854ab6537fba72eebcf, type: 3}
 --- !u!1 &1695710005
 GameObject:
@@ -32653,6 +32627,7 @@ MonoBehaviour:
   playerHealth: {fileID: 1018994471}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 456839857}
+  totalInitialHealth: 0
 --- !u!114 &1810784256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34224,6 +34199,7 @@ MonoBehaviour:
   playerHealth: {fileID: 1883984709}
   totalhealthBar: {fileID: 0}
   currenthealthBar: {fileID: 2085217885}
+  totalInitialHealth: 0
 --- !u!114 &1894250046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38867,6 +38843,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 420177924}
+    - target: {fileID: 9013455510953132288, guid: 243e6bb7617ef8840a656515864709d7, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
