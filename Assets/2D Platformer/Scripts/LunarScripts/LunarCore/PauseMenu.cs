@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         // Check for the pause button (Escape key or custom input)
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
             {
@@ -29,17 +29,29 @@ public class PauseMenu : MonoBehaviour
     // Pause the game
     public void Pause()
     {
-        PauseMenuUI.SetActive(true); // Show the Pause Menu
-        Time.timeScale = 0f;        // Freeze game time
-        isPaused = true;            // Set paused state
+        if (PauseMenuUI != null)
+        {
+            PauseMenuUI.SetActive(true); // Show the Pause Menu
+            Time.timeScale = 0f;         // Freeze game time
+            isPaused = true;             // Set paused state
+            Debug.Log("Pause menu enabled");
+        }
+        else
+        {
+            Debug.LogError("PauseMenuUI is not assigned in the Inspector!");
+        }
     }
 
     // Resume the game
     public void Resume()
     {
-        PauseMenuUI.SetActive(false); // Hide the Pause Menu
-        Time.timeScale = 1f;          // Resume game time
-        isPaused = false;             // Reset paused state
+        if (PauseMenuUI != null)
+        {
+            PauseMenuUI.SetActive(false); // Hide the Pause Menu
+            Time.timeScale = 1f;          // Resume game time
+            isPaused = false;             // Reset paused state
+            Debug.Log("Game resumed. Time Scale: " + Time.timeScale);
+        }
     }
 
     // Return to the Main Menu (or LunarMenu Scene)
