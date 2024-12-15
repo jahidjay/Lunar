@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
         // Check for the pause button (Escape key or custom input)
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("Pressed");
             if (isPaused)
             {
                 Resume();

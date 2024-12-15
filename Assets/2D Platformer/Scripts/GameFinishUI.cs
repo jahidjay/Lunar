@@ -21,7 +21,10 @@ public class GameFinishUI : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("LunarMenu");
+        GameStateManager.Instance.ChangeGameState(GameState.Game);
+        GameStateManager.Instance.isWin = false;
+
     }
 
     public void ReloadGame()
