@@ -328,11 +328,7 @@ public class Hero : MonoBehaviour
             print("hero died of suriken");
             Dead();
         }
-        else if (collision.gameObject.CompareTag("bossAttack")) 
-        {
-            print("hero died of boss attack");
-            Dead();
-        }
+       
     }
 
     bool alreadyDead = false;
